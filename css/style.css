@@ -7,6 +7,8 @@
   --main-bcg-color: #2f303a;
   --primary-bcg-color: #e5e5e5;
   --icon-color: #afb1b8;
+  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 250ms;
 }
 
 body {
@@ -64,6 +66,10 @@ body {
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -77,6 +83,10 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-menu .menu-link.active::after {
@@ -142,6 +152,10 @@ body {
   font-weight: 400;
   line-height: 1.7;
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adress-list:hover,
 .adress-list:focus {
@@ -397,11 +411,7 @@ body {
 .team-section {
   background-color: var(--filters-color);
 }
-.team-social:hover,
-.team-social:focus {
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
-}
+
 .team-social {
   width: 44px;
   height: 44px;
@@ -410,6 +420,20 @@ body {
   align-items: center;
   border-radius: 50%;
   color: var(--icon-color);
+
+  transition: background-color var(--duration) var(--time-function),
+    color var(--duration) var(--time-function);
+
+  /* transition-property: color;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.team-social:hover,
+.team-social:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
 }
 .social-footer {
   width: 44px;
@@ -419,6 +443,14 @@ body {
   align-items: center;
   border-radius: 50%;
   color: var(--primary-white-color);
+
+  transition: background-color var(--duration) var(--time-function);
+
+  /* color var(--duration) var(--time-function); */
+
+  /* transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .social-footer:hover,
@@ -541,6 +573,10 @@ body {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   color: var(--icon-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:hover,
 .client-link:focus {
@@ -575,7 +611,12 @@ body {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 
   cursor: pointer;
+
+  transition: background-color var(--duration) var(--time-function),
+    color var(--duration) var(--time-function),
+    box-shadow var(--duration) var(--time-function);
 }
+
 .main-filter-button:hover,
 .main-filter-button:focus {
   color: var(--primary-white-color);
@@ -605,13 +646,19 @@ body {
   line-height: 1.62;
   border: none;
   border-radius: 4px;
+
+  transition: background-color var(--duration) var(--time-function),
+    color var(--duration) var(--time-function),
+    box-shadow var(--duration) var(--time-function);
 }
+
 .filters-list {
   display: flex;
   margin-bottom: 50px;
   padding-left: 0;
   justify-content: center;
 }
+
 .filter-button:hover,
 .filter-button:focus {
   color: var(--primary-white-color);
@@ -679,6 +726,7 @@ body {
 .projects {
   text-decoration: none;
   display: block;
+  transition: box-shadow var(--duration) var(--time-function);
 }
 
 .projects:hover,
@@ -740,6 +788,10 @@ body {
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.71;
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-list-f:hover,
@@ -762,6 +814,10 @@ body {
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.71;
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-list-f:hover,
