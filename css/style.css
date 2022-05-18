@@ -286,8 +286,8 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   visibility: visible;
   opacity: 1;
-  /* transition: opacity var(--duration) var(--time-function),
-  visibility var(--duration) var(--time-function); */
+  transition: opacity var(--duration) var(--time-function),
+    visibility var(--duration) var(--time-function);
   /* z-index: 1; */
 }
 
@@ -297,6 +297,9 @@ body {
   visibility: hidden;
 }
 
+.backdrop.backdrop.is-hidden.modal {
+  transform: scale(2);
+}
 .modal {
   position: absolute;
   left: 50%;
@@ -311,6 +314,8 @@ body {
   /* display: flex;
   justify-content: flex-end;
   align-items: flex-start; */
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--duration) var(--time-function);
 }
 
 .modal-exit {
